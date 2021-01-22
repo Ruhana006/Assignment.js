@@ -3,12 +3,11 @@
 // kilometerToMeter
 function kilometerToMeter(km) {
     if (km < 0 ) {
-        return 'Error message'
+        return 'Distance cannot be negative'
     }
     var meter = Math.round(km * 1000);
     return meter;
 }
-console.log(kilometerToMeter('uyh'))
 
 // budgetCalculator
 function budgetCalculator(watch, mobile, laptop) {
