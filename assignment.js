@@ -1,4 +1,6 @@
-// // kilometerToMeter
+// https://github.com/Ruhana006/Assignment.js
+
+// kilometerToMeter
 function kilometerToMeter(km){
      var meter =Math.round( km * 1000);
     return meter;
