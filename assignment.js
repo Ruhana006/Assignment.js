@@ -8,11 +8,11 @@ function kilometerToMeter(km){
 
 // megaFriend
 function megaFriend(arr){
-    let longestString = '';
-    for(let i=0; i< arr.length; i++){
-        let currentElement = arr[i];
-        if(currentElement.length>longestString.length){
-            longestString = arr[i];
+    var longestName = '';
+    for(var i=0; i< arr.length; i++){
+        var currentElement = arr[i];
+        if(currentElement.length>longestName.length){
+            longestName = arr[i];
         }
         }
     return longestString;
@@ -28,16 +28,23 @@ function budgetCalculator(watch, mobile, laptop){
 
 // hotelCost
 function hotelCost(days){
-    var forTenDays = days *100;
-    var forTwentyDays= days *80;
-    var forOverTwentyDays = days *50;
+    var totalCost =0;
     if(days <=10){
-        return forTenDays;
+        totalCost = days * 100;
     }
-    else if(days>10 && days<=20){
-        return forTwentyDays;
+    else if(days <=20){
+        var firstTenDays = 10*100;
+        var remainingDays = days -10;
+        var secondTenDays = remainingDays*80;
+        totalCost = firstTenDays + secondTenDays;
     }
-    else if(days>20){
-        return forOverTwentyDays;
+    else{
+        var firstTenDays = 10*100;
+        var secondTenDays = 10*80;
+        var remainingDays = days - 20;
+        var overTwentyDays = remainingDays*50;
+        totalCost= firstTenDays + secondTenDays + overTwentyDays;
     }
-}
+    return totalCost;
+} 
+
