@@ -2,12 +2,13 @@
 
 // kilometerToMeter
 function kilometerToMeter(km) {
-    if (km < 0 || km !== '0') {
+    if (km < 0 ) {
         return 'Error message'
     }
     var meter = Math.round(km * 1000);
     return meter;
 }
+console.log(kilometerToMeter('uyh'))
 
 // budgetCalculator
 function budgetCalculator(watch, mobile, laptop) {
