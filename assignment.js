@@ -9,6 +9,15 @@ function kilometerToMeter(km) {
     return meter;
 }
 
+// budgetCalculator
+function budgetCalculator(watch, mobile, laptop) {
+    if (watch < 0 || mobile < 0 || laptop < 0) {
+        return 'Error. input cannot be negative'
+    }
+    var result = watch * 50 + mobile * 100 + laptop * 500;
+    return result;
+}
+
 // megaFriend
 function megaFriend(arr) {
     var longestName = '';
@@ -21,16 +30,7 @@ function megaFriend(arr) {
             longestName = arr[i];
         }
     }
-    return longestString;
-}
-
-// budgetCalculator
-function budgetCalculator(watch, mobile, laptop) {
-    if(watch <0 || mobile<0 || laptop <0){
-        return 'Error. input cannot be negative'
-    }
-    var result = watch * 50 + mobile * 100 + laptop * 500;
-    return result;
+    return longestName;
 }
 
 // hotelCost
@@ -57,6 +57,7 @@ function hotelCost(days) {
     }
     return totalCost;
 }
+
 
 
 
